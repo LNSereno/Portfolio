@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.Navegacao {
+    position: fixed;
+    top: 0;
+    background: rgba(15, 23, 42, 0.6);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.Menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.Menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.Menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+.Menu-link:hover::after{
+    width: 100%;
+}
+.Cabecalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Foto-perfil{
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 0 20px rgba(79,70,229,0.3) ;
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+}
+.h1 {
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}
+.Cabecalho-sub{
+    font-size: 1.5rem;
+    color: var(--claro);
+    font: bold;
+}
+.Sobre{
+    padding: 6rem 2rem;
+
+}
+.Sobre-titulo{
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+}
+.Sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05) ;
+}
+.Sobre-paragrafo{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.Sobre-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.Sobre-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.Sobre-link i {
+    font-size: 1.4rem;
+}
+.Sobre-link:hover {
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+.Projetos {
+    padding: 6rem 2rem;
+}
+
+.Projetos-titulos {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.Projetos-card {
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.Projetos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+}
+
+.Projetos-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.Projetos-nome {
+    font-size: 1.3rem;
+    color: var(--primaria);
+    margin-bottom: 0.8rem;
+}
+
+.Projetos-descricao {
+    font-size: 1rem;
+    color: var(--claro);
+}
+.Projetos-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Projetos-link{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    font-weight: 500;
+    transition: 0.3 ease;
+}
+.Projetos-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
